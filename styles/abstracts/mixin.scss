@@ -1,0 +1,21 @@
+@mixin base-zero {
+	margin: 0;
+	padding: 0;
+}
+@mixin navigation-size {
+	height: $NAVIGATION_HEIGHT;
+	width: 100%;
+}
+@mixin row-second-responsive {
+	.row-item:nth-child(2) {
+		margin: 0 5rem;
+		@include respond(tab-port) {
+			margin: 3.4rem 0;
+		}
+	}
+}
+@mixin h3-padding-top {
+	h3 {
+		padding-top: 6rem;
+	}
+}

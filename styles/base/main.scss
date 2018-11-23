@@ -1,0 +1,65 @@
+body,
+header,
+section,
+footer,
+main,
+h1,
+h2,
+h3,
+h4,
+hr {
+	@include base-zero;
+}
+html {
+	font-size: 62.5%; /* 1rem = 10px */
+	box-sizing: border-box;
+	@include respond(big-desktop) {
+		font-size: 75.5%; /* 1rem = 12px */
+	}
+	@include respond(tab-land) {
+		font-size: 50%; /* 1rem = 8px */
+	}
+	@include respond(tab-port) {
+		font-size: 47%; /* 1rem = 7.5px */
+	}
+	@include respond(phone-xl) {
+		font-size: 38%; /* 1rem = 6px */
+	}
+	@include respond(phone-lg) {
+		font-size: 35%; /* 1rem = 5.5px */
+	}
+}
+body {
+	overflow-x: hidden;
+	width: 100%;
+	height: 100%;
+	font-family: $FONT_MAIN, $FONT_SECONDARY;
+}
+section {
+	padding-bottom: 6rem;
+}
+h1 {
+	font-size: 8rem;
+	color: $COLOR_LIGHT_BROWN;
+	@media all and (max-width: 360px) {
+		font-size: 6.5rem;
+	}
+}
+h2 {
+	font-size: 4.4rem;
+	font-weight: normal;
+}
+h3 {
+	font-size: 4.4rem;
+	color: $COLOR_LIGHT_BROWN;
+	font-weight: normal;
+	padding-top: 6rem;
+}
+h4 {
+	padding-top: 2.8rem;
+	font-size: 2.4rem;
+}
+hr {
+	border: 0 solid $COLOR_LIGHT_GREY;
+	border-top-width: .1rem;
+}
